@@ -1,4 +1,4 @@
-import type { ApiError } from './ApiError.js';
+import type { ApiError } from './apiError.ts';
 
 export interface uiState {
 	isLoading: boolean;

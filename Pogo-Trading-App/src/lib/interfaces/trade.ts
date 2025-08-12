@@ -1,16 +1,18 @@
 import type { inventoryItem } from './inventoryItem.ts';
-import type { User } from './user.js';
+import type { User } from './user.ts';
 
 export interface tradeOffer {
 	id: string;
 	Creatorid: string;
-	Offereditems: [inventoryItem];
-	Requesteitems: [inventoryItem];
+	Offereditems: inventoryItem[];
+	Requesteitems: inventoryItem[];
+	Participants: User[];
+
 	Message: string;
 	Status: 'pending' | 'accepted' | 'declined' | 'cancelled' | 'completed';
 	createdAt: Date;
 	expiresAt: Date;
-	Participants: [User];
+
 	Visibility: boolean;
 }
 export interface tradeActivity {
